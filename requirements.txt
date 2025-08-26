@@ -1,0 +1,37 @@
+# Red Teaming Web Interface - Dependências
+# Aplicação Flask para análise de vulnerabilidades em modelos de linguagem
+
+# Framework web principal
+Flask==2.3.3
+
+# Utilitários para requisições HTTP (opcional, para futuras extensões)
+requests==2.31.0
+
+# Processamento de dados JSON (built-in, mas listado para clareza)
+# json - built-in
+
+# Manipulação de datas e tempo (built-in, mas listado para clareza)
+# datetime - built-in
+
+# Expressões regulares (built-in, mas listado para clareza)
+# re - built-in
+
+# Subprocess para execução de comandos Ollama (built-in)
+# subprocess - built-in
+
+# Sistema operacional (built-in)
+# os - built-in
+
+# Tipagem (built-in no Python 3.8+)
+# typing - built-in
+
+# Pathlib para manipulação de caminhos (built-in)
+# pathlib - built-in
+
+# Dependências opcionais para desenvolvimento
+# Werkzeug==2.3.7  # Já incluído com Flask
+# Jinja2==3.1.2     # Já incluído com Flask
+
+# Nota: Ollama deve ser instalado separadamente
+# curl -fsSL https://ollama.ai/install.sh | sh
+# ollama pull gpt-oss:20b
