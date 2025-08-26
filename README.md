@@ -24,7 +24,7 @@ Projeto abrangente de red teaming do modelo `gpt-oss-20b` via Ollama, desenvolvi
 │   ├── red_teaming_automation.py   # Script principal de automação
 │   ├── json_report_generator.py    # Gerador de relatórios JSON
 │   ├── test_single_prompt.py       # Teste individual de prompts
-│   └── red_teaming_prompts_portuguese.md # Prompts em português
+│   
 │
 ├── 📊 Resultados_Analises/
 │   ├── red_teaming_results_20250826_021913.json # Resultados finais

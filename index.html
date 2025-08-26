@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão do Projeto: Red Teaming gpt-oss-20b</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #eef2f7; /* Um cinza azulado mais claro */
+        }
+        .project-card-v2 {
+            display: flex;
+            width: 650px;
+            height: 280px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .project-card-v2:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+        }
+        .export-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+        }
+        .btn {
+            padding: 8px 16px;
+            margin: 4px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+        .btn-secondary {
+            background: #6b7280;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .size-info {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="project-card-v2">
+        <!-- Lado Esquerdo: Visual -->
+        <div class="w-1/3 bg-slate-800 flex flex-col items-center justify-center p-6 text-white">
+            <div class="w-24 h-24 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <title>Ícone de Análise de Segurança</title>
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" class="stroke-red-500 opacity-30"></path>
+                    <path d="M16 8.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" class="stroke-cyan-300"></path>
+                    <line x1="12" y1="1" x2="12" y2="6" class="stroke-yellow-400"></line>
+                    <line x1="12" y1="18" x2="12" y2="23" class="stroke-yellow-400"></line>
+                    <line x1="4.22" y1="4.22" x2="7.76" y2="7.76" class="stroke-yellow-400"></line>
+                    <line x1="16.24" y1="16.24" x2="19.78" y2="19.78" class="stroke-yellow-400"></line>
+                    <line x1="1" y1="12" x2="6" y2="12" class="stroke-yellow-400"></line>
+                    <line x1="18" y1="12" x2="23" y2="12" class="stroke-yellow-400"></line>
+                    <line x1="4.22" y1="19.78" x2="7.76" y2="16.24" class="stroke-yellow-400"></line>
+                    <line x1="16.24" y1="7.76" x2="19.78" y2="4.22" class="stroke-yellow-400"></line>
+                </svg>
+            </div>
+            <h2 class="font-bold text-lg text-center">AI Security</h2>
+            <p class="text-xs text-slate-400 text-center">Red Teaming Report</p>
+        </div>
+
+        <!-- Lado Direito: Conteúdo -->
+        <div class="w-2/3 p-6 flex flex-col justify-between">
+            <div>
+                <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-md">PROJETO KAGGLE</span>
+                <h1 class="text-xl font-extrabold text-gray-800 mt-2 mb-2">Red Teaming: gpt-oss-20b</h1>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Análise de vulnerabilidades em 5 categorias de risco, revelando falhas de segurança em cenários de sabotagem.
+                </p>
+            </div>
+            
+            <!-- Estatísticas Chave -->
+            <div class="flex gap-4 text-sm mt-4">
+                <div class="flex items-center">
+                    <span class="font-bold text-green-600 bg-green-100 px-2 py-1 rounded-md">60%</span>
+                    <span class="ml-2 text-gray-600">Detecção</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="font-bold text-orange-600 bg-orange-100 px-2 py-1 rounded-md">2/5</span>
+                    <span class="ml-2 text-gray-600">Severidade Máx.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles de Exportação -->
+    <div class="export-controls">
+        <h3 class="font-bold text-gray-800 mb-3">Exportar Imagens</h3>
+        
+        <div class="mb-3">
+            <button onclick="exportCard('full')" class="btn btn-primary w-full">
+                📄 Cartão Completo
+            </button>
+            <div class="size-info">650x280px - Para apresentações</div>
+        </div>
+        
+        <div class="mb-3">
+            <button onclick="exportCard('kaggle-banner')" class="btn btn-primary w-full">
+                🏆 Banner Kaggle
+            </button>
+            <div class="size-info">1200x400px - Capa do dataset</div>
+        </div>
+        
+        <div class="mb-3">
+            <button onclick="exportCard('kaggle-thumb')" class="btn btn-secondary w-full">
+                🖼️ Miniatura Kaggle
+            </button>
+            <div class="size-info">400x300px - Thumbnail</div>
+        </div>
+        
+        <div class="mb-3">
+            <button onclick="exportCard('square')" class="btn btn-secondary w-full">
+                ⬜ Formato Quadrado
+            </button>
+            <div class="size-info">500x500px - Redes sociais</div>
+        </div>
+        
+        <div class="text-xs text-gray-500 mt-4 p-2 bg-gray-50 rounded">
+            💡 <strong>Dica:</strong> As imagens são otimizadas para submissão no Kaggle com alta qualidade.
+        </div>
+    </div>
+
+    <script>
+        // Função principal para exportar o cartão em diferentes formatos
+        async function exportCard(format) {
+            const card = document.querySelector('.project-card-v2');
+            
+            // Configurações para diferentes formatos
+            const formats = {
+                'full': {
+                    scale: 2,
+                    width: 650,
+                    height: 280,
+                    filename: 'red-teaming-card-full.png'
+                },
+                'kaggle-banner': {
+                    scale: 3,
+                    width: 1200,
+                    height: 400,
+                    filename: 'kaggle-banner-red-teaming.png'
+                },
+                'kaggle-thumb': {
+                    scale: 2,
+                    width: 400,
+                    height: 300,
+                    filename: 'kaggle-thumbnail-red-teaming.png'
+                },
+                'square': {
+                    scale: 2,
+                    width: 500,
+                    height: 500,
+                    filename: 'red-teaming-square.png'
+                }
+            };
+            
+            const config = formats[format];
+            
+            try {
+                // Mostrar indicador de carregamento
+                showLoadingIndicator(true);
+                
+                // Capturar o cartão como canvas
+                const canvas = await html2canvas(card, {
+                    scale: config.scale,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: '#ffffff',
+                    width: card.offsetWidth,
+                    height: card.offsetHeight
+                });
+                
+                // Criar canvas final com dimensões específicas
+                const finalCanvas = document.createElement('canvas');
+                const ctx = finalCanvas.getContext('2d');
+                finalCanvas.width = config.width;
+                finalCanvas.height = config.height;
+                
+                // Preencher fundo branco
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, config.width, config.height);
+                
+                // Calcular posicionamento para centralizar
+                const aspectRatio = canvas.width / canvas.height;
+                const targetAspectRatio = config.width / config.height;
+                
+                let drawWidth, drawHeight, offsetX, offsetY;
+                
+                if (format === 'square') {
+                    // Para formato quadrado, centralizar o cartão
+                    const scale = Math.min(config.width * 0.8 / canvas.width, config.height * 0.8 / canvas.height);
+                    drawWidth = canvas.width * scale;
+                    drawHeight = canvas.height * scale;
+                    offsetX = (config.width - drawWidth) / 2;
+                    offsetY = (config.height - drawHeight) / 2;
+                } else if (format === 'kaggle-banner') {
+                    // Para banner Kaggle, esticar horizontalmente
+                    drawHeight = config.height * 0.7;
+                    drawWidth = drawHeight * aspectRatio;
+                    offsetX = (config.width - drawWidth) / 2;
+                    offsetY = (config.height - drawHeight) / 2;
+                } else if (format === 'kaggle-thumb') {
+                    // Para thumbnail, ajustar proporcionalmente
+                    const scale = Math.min(config.width * 0.9 / canvas.width, config.height * 0.9 / canvas.height);
+                    drawWidth = canvas.width * scale;
+                    drawHeight = canvas.height * scale;
+                    offsetX = (config.width - drawWidth) / 2;
+                    offsetY = (config.height - drawHeight) / 2;
+                } else {
+                    // Formato original
+                    drawWidth = config.width;
+                    drawHeight = config.height;
+                    offsetX = 0;
+                    offsetY = 0;
+                }
+                
+                // Desenhar a imagem no canvas final
+                ctx.drawImage(canvas, offsetX, offsetY, drawWidth, drawHeight);
+                
+                // Converter para blob e fazer download
+                finalCanvas.toBlob((blob) => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = config.filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    
+                    showLoadingIndicator(false);
+                    showSuccessMessage(config.filename);
+                }, 'image/png', 1.0);
+                
+            } catch (error) {
+                console.error('Erro ao exportar imagem:', error);
+                showLoadingIndicator(false);
+                alert('Erro ao gerar a imagem. Tente novamente.');
+            }
+        }
+        
+        // Função para mostrar indicador de carregamento
+        function showLoadingIndicator(show) {
+            let indicator = document.getElementById('loading-indicator');
+            
+            if (show && !indicator) {
+                indicator = document.createElement('div');
+                indicator.id = 'loading-indicator';
+                indicator.innerHTML = `
+                    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
+                            <div style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px;"></div>
+                            <p>Gerando imagem...</p>
+                        </div>
+                    </div>
+                    <style>
+                        @keyframes spin {
+                            0% { transform: rotate(0deg); }
+                            100% { transform: rotate(360deg); }
+                        }
+                    </style>
+                `;
+                document.body.appendChild(indicator);
+            } else if (!show && indicator) {
+                document.body.removeChild(indicator);
+            }
+        }
+        
+        // Função para mostrar mensagem de sucesso
+        function showSuccessMessage(filename) {
+            const message = document.createElement('div');
+            message.innerHTML = `
+                <div style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #10b981; color: white; padding: 12px 24px; border-radius: 8px; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    ✅ Imagem <strong>${filename}</strong> baixada com sucesso!
+                </div>
+            `;
+            document.body.appendChild(message);
+            
+            setTimeout(() => {
+                document.body.removeChild(message);
+            }, 3000);
+        }
+        
+        // Adicionar informações sobre requisitos do Kaggle
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎯 Gerador de Imagens para Kaggle - Red Teaming Project');
+            console.log('📋 Formatos disponíveis:');
+            console.log('   • Cartão Completo: 650x280px (apresentações)');
+            console.log('   • Banner Kaggle: 1200x400px (capa do dataset)');
+            console.log('   • Miniatura Kaggle: 400x300px (thumbnail)');
+            console.log('   • Formato Quadrado: 500x500px (redes sociais)');
+        });
+    </script>
+
+</body>
+</html>
