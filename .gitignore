@@ -1,0 +1,40 @@
+# Credenciais sensíveis
+kaggle/
+*.key
+*.json
+!red_teaming_finding_*.json
+!red_teaming_results_20250826_021913.json
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Diretórios de build
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Resultados intermediários (manter apenas o final)
+red_teaming_results_202508*.json
+!red_teaming_results_20250826_021913.json
+
+# Logs de execução
+*.out
+*.err
