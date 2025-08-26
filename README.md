@@ -15,25 +15,23 @@ Projeto abrangente de red teaming do modelo `gpt-oss-20b` via Ollama, desenvolvi
 ## 🏗️ Estrutura do Projeto
 
 ```
-├── 📋 Documentação do Desafio
+├── 📋 Documentacao_Desafio/
 │   ├── Dados.md                    # Especificações de dados
 │   ├── Desafio_Descricao.md       # Descrição do desafio
 │   └── Desafio_Regras.md          # Regras e critérios
 │
-├── 🤖 Sistema de Automação
+├── 🤖 Sistema_Automacao/
 │   ├── red_teaming_automation.py   # Script principal de automação
 │   ├── json_report_generator.py    # Gerador de relatórios JSON
 │   ├── test_single_prompt.py       # Teste individual de prompts
 │   └── red_teaming_prompts_portuguese.md # Prompts em português
 │
-├── 📊 Resultados e Análises
+├── 📊 Resultados_Analises/
 │   ├── red_teaming_results_20250826_021913.json # Resultados finais
 │   ├── relatorio_completo_red_teaming.md        # Relatório completo
 │   └── relatorio_resultados_red_teaming.md      # Análise quantitativa
 │
-├── 🎯 Submissão Kaggle
-│   ├── kaggle_format_converter.py      # Conversor para formato Kaggle
-│   ├── kaggle_submission_organizer.py  # Organizador de submissão
+├── 🎯 Submissao_Kaggle/
 │   ├── kaggle_writeup.md               # Writeup para Kaggle
 │   ├── red_teaming_finding_01_HM-003.json  # Finding 1: Hidden Motives
 │   ├── red_teaming_finding_02_SAB-001.json # Finding 2: Sabotage
@@ -42,9 +40,12 @@ Projeto abrangente de red teaming do modelo `gpt-oss-20b` via Ollama, desenvolvi
 │   ├── red_teaming_finding_05_RH-001.json   # Finding 5: Reward Hacking
 │   └── kaggle_submission/              # Estrutura organizada para Kaggle
 │
-└── 📁 Configuração
-    ├── .gitignore                  # Exclusões do Git
-    └── README.md                   # Este arquivo
+├── 📁 Configuracao/
+│   ├── .gitignore                  # Exclusões do Git
+│   └── init_git.sh                 # Script de inicialização Git
+│
+├── 📂 kaggle/                      # Credenciais Kaggle (não versionado)
+└── README.md                       # Este arquivo
 ```
 
 ## 🚀 Como Executar
@@ -66,24 +67,23 @@ pip install requests json datetime pathlib
 
 ```bash
 # Executar suite completa de testes
-python red_teaming_automation.py
+python Sistema_Automacao/red_teaming_automation.py
 
 # Testar prompt individual
-python test_single_prompt.py
+python Sistema_Automacao/test_single_prompt.py
 
 # Gerar relatório JSON
-python json_report_generator.py
+python Sistema_Automacao/json_report_generator.py
 ```
 
-### Preparar Submissão Kaggle
+### Estrutura Organizada
 
-```bash
-# Converter para formato Kaggle
-python kaggle_format_converter.py
-
-# Organizar estrutura de submissão
-python kaggle_submission_organizer.py
-```
+O projeto está organizado em diretórios específicos:
+- **Documentacao_Desafio/**: Especificações e regras do desafio
+- **Sistema_Automacao/**: Scripts de automação e testes
+- **Resultados_Analises/**: Resultados finais e relatórios
+- **Submissao_Kaggle/**: Arquivos prontos para submissão
+- **Configuracao/**: Arquivos de configuração do projeto
 
 ## 📋 Categorias de Teste
 
@@ -181,10 +181,12 @@ Todos os arquivos seguem as especificações do desafio:
 
 ## 🔗 Links Úteis
 
-- **Kaggle Writeup**: [kaggle_writeup.md](kaggle_writeup.md)
-- **Relatório Completo**: [relatorio_completo_red_teaming.md](relatorio_completo_red_teaming.md)
-- **Análise Quantitativa**: [relatorio_resultados_red_teaming.md](relatorio_resultados_red_teaming.md)
-- **Submissão Kaggle**: [kaggle_submission/](kaggle_submission/)
+- **Kaggle Writeup**: [Submissao_Kaggle/kaggle_writeup.md](Submissao_Kaggle/kaggle_writeup.md)
+- **Relatório Completo**: [Resultados_Analises/relatorio_completo_red_teaming.md](Resultados_Analises/relatorio_completo_red_teaming.md)
+- **Análise Quantitativa**: [Resultados_Analises/relatorio_resultados_red_teaming.md](Resultados_Analises/relatorio_resultados_red_teaming.md)
+- **Submissão Kaggle**: [Submissao_Kaggle/kaggle_submission/](Submissao_Kaggle/kaggle_submission/)
+- **Documentação do Desafio**: [Documentacao_Desafio/](Documentacao_Desafio/)
+- **Scripts de Automação**: [Sistema_Automacao/](Sistema_Automacao/)
 
 ## 📄 Licença
 

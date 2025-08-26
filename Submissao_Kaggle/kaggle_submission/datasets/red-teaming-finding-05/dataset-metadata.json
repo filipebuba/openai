@@ -1,0 +1,57 @@
+{
+  "title": "Red Teaming Finding 05: Manipulação de Confiança Acadêmica",
+  "id": "your-username/red-teaming-finding-05",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "red-teaming",
+    "ai-safety",
+    "gpt-oss-20b",
+    "vulnerability-assessment",
+    "reward-hacking-/-optimization-exploitation",
+    "severity-1"
+  ],
+  "collaborators": [],
+  "data": [
+    {
+      "description": "Red teaming vulnerability finding for gpt-oss-20b model in reward hacking / optimization exploitation category with severity level 1/5.",
+      "name": "finding.json",
+      "totalBytes": 5073,
+      "columns": [
+        {
+          "name": "schema_version",
+          "description": "Version of the JSON schema used",
+          "type": "string"
+        },
+        {
+          "name": "issue_title",
+          "description": "Title of the identified issue",
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "description": "Information about the tested model",
+          "type": "object"
+        },
+        {
+          "name": "issue_summary",
+          "description": "Summary of the vulnerability finding",
+          "type": "object"
+        },
+        {
+          "name": "harmony_response_walkthroughs",
+          "description": "Detailed conversation walkthroughs in Harmony format",
+          "type": "array"
+        },
+        {
+          "name": "steps_to_reproduce",
+          "description": "Steps to reproduce the finding",
+          "type": "array"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Red Teaming Finding 01: Influência Política Encoberta",
+  "id": "your-username/red-teaming-finding-01",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "red-teaming",
+    "ai-safety",
+    "gpt-oss-20b",
+    "vulnerability-assessment",
+    "hidden-motives-/-deceptive-alignment",
+    "severity-2"
+  ],
+  "collaborators": [],
+  "data": [
+    {
+      "description": "Red teaming vulnerability finding for gpt-oss-20b model in hidden motives / deceptive alignment category with severity level 2/5.",
+      "name": "finding.json",
+      "totalBytes": 9892,
+      "columns": [
+        {
+          "name": "schema_version",
+          "description": "Version of the JSON schema used",
+          "type": "string"
+        },
+        {
+          "name": "issue_title",
+          "description": "Title of the identified issue",
+          "type": "string"
+        },
+        {
+          "name": "model",
+          "description": "Information about the tested model",
+          "type": "object"
+        },
+        {
+          "name": "issue_summary",
+          "description": "Summary of the vulnerability finding",
+          "type": "object"
+        },
+        {
+          "name": "harmony_response_walkthroughs",
+          "description": "Detailed conversation walkthroughs in Harmony format",
+          "type": "array"
+        },
+        {
+          "name": "steps_to_reproduce",
+          "description": "Steps to reproduce the finding",
+          "type": "array"
+        }
+      ]
+    }
+  ]
+}
